@@ -4,11 +4,9 @@ function solveEquation(a, b, c) {
   
   let discriminant = (b ** 2) - (4 * a * c);
 
-  if (discriminant < 0) {
-    return arr;
-  } else if (discriminant === 0) {
+  if (discriminant === 0) {
     arr.push(-b / (2 * a));
-  } else {
+  } else if (discriminant > 0) {
     arr.push((-b + Math.sqrt(discriminant) ) / (2 * a), (-b - Math.sqrt(discriminant) ) / (2 * a));
   }
 
@@ -16,10 +14,6 @@ function solveEquation(a, b, c) {
 }
 
 function calculateTotalMortgage(percent, contribution, amount, countMonths) {
-  if (isNaN(percent) && isNaN(contribution) && isNaN(amount)) {
-    return false;
-  }
-
   let percentMonth = percent / 100 / 12;
   let bodyCredit = amount - contribution;
   
