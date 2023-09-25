@@ -113,6 +113,13 @@ class Library {
       return null;
   }
 
+  //вариант от преподавателя:
+
+  //findBookBy(type, value) {
+  //  const findResult = this.books.find((item) => item[type] === value);
+  //  return findResult || null;
+  //}
+
   giveBookByName(bookName) {
     for (let i = 0; i < this.books.length; i++) {
         if (this.books[i].name === bookName) {
@@ -124,6 +131,15 @@ class Library {
       return null
   }
 }
+
+//вариант от преподаувателя:
+
+//giveBookByName(bookName) {
+//  const book = this.findBookBy("name", bookName);
+//  if (!book) return null;
+//  this.books = this.books.filter((item) => item.name !== bookName);
+//  return book;
+//}
 
 //примеры
 
